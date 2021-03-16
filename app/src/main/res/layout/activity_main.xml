@@ -26,4 +26,11 @@
         android:text="歸零"
         android:textSize="36sp" />
 
+    <Button
+        android:id="@+id/btnHappy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="樂透"
+        android:textSize="36sp" />
+
 </LinearLayout>

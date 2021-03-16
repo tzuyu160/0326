@@ -14,6 +14,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
         txv.setOnClickListener(this)
         btn.setOnClickListener(this)
+
+        btnHappy.setOnClickListener(object:View.OnClickListener{
+            override fun onClick(p0: View?) {
+                counter= (1..100).random()
+                txv.text = counter.toString()
+            }
+        })
     }
 
     override fun onClick(view: View) {
