@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener,
+    View.OnLongClickListener{
 
     var counter: Int = 0
 
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 txv.text = counter.toString()
             }
         })
+
+        txv.setOnLongClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -31,5 +34,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             counter = 0
         }
         txv.text = counter.toString()
+    }
+
+    override fun onLongClick(p0: View?): Boolean {
+        counter+=2
+        txv.text = counter.toString()
+        return true
     }
 }
