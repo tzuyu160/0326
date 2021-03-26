@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     override fun onLongClick(p0: View?): Boolean {
-        counter+=2
+        counter+=1
         txv.text = counter.toString()
         return true
     }
